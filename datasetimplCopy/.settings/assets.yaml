@@ -1,0 +1,46 @@
+name: datasetimpl
+version: 2
+projectReferences: 
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /datasetimpl/src
+        type: javaClasspath
+  - name: p.recdata
+  - name: p.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /datasetimpl/p.recdata
+        type: recsessionRecdata
+  - name: p.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 10.5.3.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1ED0DC29FE142F0C266B23437376532
+    dependencies: 
+      - path: /datasetimpl/.classpath
+        type: testJavaClasspath
+      - path: /datasetimpl/p.recsession
+        type: testRecsession
+      - path: /datasetimpl/protecto_ai_582.ma
+        type: test#moeb.applicationPackage
+      - path: /datasetimpl/src/test/Gettpan.java
+        type: testCustomCode
+      - path: /datasetimpl/val.csv
+        type: testDatapool
+  - name: protecto_ai_582.ma
+    type: moeb.applicationPackage
+  - name: src
+    resources: 
+      - name: test
+        resources: 
+          - name: Gettpan.java
+  - name: val.csv
+    type: com.ibm.rational.test.lt.datapool
+    dependencies: 
+      - path: /datasetimpl/val.csv.metadata
+        type: datasetMetadata
+  - name: val.csv.metadata
