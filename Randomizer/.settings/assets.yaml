@@ -1,0 +1,51 @@
+name: Randomizer
+version: 2
+projectReferences: 
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /Randomizer/src
+        type: javaClasspath
+  - name: RandomNumber_1701671713698.stats
+    type: com.ibm.rational.test.lt.stats.session
+    properties: 
+      startTime: 1701671713698
+      tags: 
+      testId: A1EE909D5DF9C7E0E6CEE63037666638
+      testName: RandomNumber
+    dependencies: 
+      - path: /Randomizer/RandomNumber_1701671713698_orch!system.mstats
+        type: statsSessionStore
+      - path: /Randomizer/RandomNumber_1701671713698_orch!system.rstats
+        type: statsSessionStore
+      - path: /Randomizer/RandomNumber_1701671713698_perf!localhost.mstats
+        type: statsSessionStore
+      - path: /Randomizer/RandomNumber_1701671713698_perf!localhost.rstats
+        type: statsSessionStore
+      - path: /Randomizer/RandomNumber_1701671719205.executiondlr
+        type: statsSessionAsset
+      - path: /Randomizer/Tests/RandomNumber.testsuite
+        type: statsSessionTest
+  - name: RandomNumber_1701671713698_orch!system.mstats
+  - name: RandomNumber_1701671713698_orch!system.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: RandomNumber_1701671713698_perf!localhost.mstats
+  - name: RandomNumber_1701671713698_perf!localhost.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: RandomNumber_1701671719205.executiondlr
+  - name: Tests
+    resources: 
+      - name: RandomNumber.testsuite
+        type: com.ibm.rational.test.lt.test
+        version: 10.5.3.0
+        properties: 
+          features: com.ibm.rational.test.lt.feature.lt
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1EE909D5DF9C7E0E6CEE63037666638
+  - name: src
+    resources: 
+      - name: test
+        resources: 
+          - name: RandomNumber_Test_A1EE909D5DF9C7E0E6CEE63037666638.java
+            type: com.ibm.rational.test.lt.generatedCode
