@@ -1,1 +1,1 @@
-shasmita
+Hard reset
